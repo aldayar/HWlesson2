@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AddFragment"
+    android:id="@+id/add_fragment"
+    >
+
+    <androidx.cardview.widget.CardView
+       app:cardCornerRadius="16dp"
+        android:id="@+id/card_view"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="42dp"
+        android:layout_width="match_parent"
+        android:layout_height="311dp">
+
+        <ImageView
+
+            android:layout_marginBottom="42dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_photo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:textSize="16dp"
+        android:hint="@string/add_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+    <EditText
+        android:textColor="@color/white_dark"
+        android:layout_marginHorizontal="40dp"
+        android:layout_margin="5dp"
+        android:padding="12dp"
+        android:textSize="20sp"
+        android:hint="@string/title"
+        android:background="@drawable/bg_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+        <EditText
+            android:textColor="@color/white_dark"
+            android:layout_margin="5dp"
+            android:padding="12dp"
+            android:textSize="20sp"
+            android:hint="@string/description"
+            android:background="@drawable/bg_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:textColor="@color/white_dark"
+            android:layout_margin="5dp"
+            android:padding="12dp"
+            android:textSize="20sp"
+            android:hint="@string/date"
+            android:background="@drawable/bg_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.button.MaterialButton
+
+            android:backgroundTint="@color/yellow"
+            android:textColor="@color/white_dark"
+            android:layout_margin="5dp"
+            android:padding="12dp"
+            android:textSize="20sp"
+            android:text="@string/add"
+            android:gravity="center"
+            app:cornerRadius="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
