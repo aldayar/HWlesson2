@@ -1,5 +1,6 @@
 package com.example.hwlesson2;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -25,6 +26,7 @@ public class MainFragment extends Fragment {
 
         add=view.findViewById(R.id.add_btn);
         sortBtn=view.findViewById(R.id.sort_btn);
+        mainEditText=view.findViewById(R.id.main_edit_text);
 
         add.setOnClickListener(view1 -> {
             AddFragment addFragment = new AddFragment();
@@ -36,17 +38,20 @@ public class MainFragment extends Fragment {
         sortBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                inputtedText=mainEditText.getText().toString();
+
                 AddFragment addFragment= new AddFragment();
-                inputtedText = searchingEditText();
+                Bundle bundle= new Bundle();
+                bundle.putString("key",inputtedText);
+                AddFragment addFragment1=new AddFragment();
+                addFragment1.setArguments(bundle);
+                
                 FragmentTransaction ft=getParentFragmentManager().beginTransaction();
                 ft.replace(R.id.main_fragment,addFragment).commit();
             }
         });
         return view;
     }
-    private String searchingEditText() {
-     mainEditText=getView().findViewById(R.id.main_edit_text);
-     return mainEditText.getText().toString();
-    }
+
 
 }

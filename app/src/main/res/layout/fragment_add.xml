@@ -43,6 +43,7 @@
         android:layout_height="0dp">
 
     <EditText
+        android:id="@+id/edit_title"
         android:textColor="@color/white_dark"
         android:layout_marginHorizontal="40dp"
         android:layout_margin="5dp"
